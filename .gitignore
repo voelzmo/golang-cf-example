@@ -4,6 +4,7 @@
 *.so
 
 # Folders
+out
 _obj
 _test
 

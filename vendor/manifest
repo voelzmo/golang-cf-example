@@ -1,0 +1,80 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "code.cloudfoundry.org/lager",
+			"repository": "https://github.com/cloudfoundry/lager",
+			"vcs": "git",
+			"revision": "62951a8009ab331bb21dc418074fa54e66eb9b6a",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry-community/go-cfenv",
+			"repository": "https://github.com/cloudfoundry-community/go-cfenv",
+			"vcs": "git",
+			"revision": "c567d77dab8551bc4077e68e5a04415f1d74a911",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gorilla/context",
+			"repository": "https://github.com/gorilla/context",
+			"vcs": "git",
+			"revision": "aed02d124ae4a0e94fea4541c8effd05bf0c8296",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gorilla/mux",
+			"repository": "https://github.com/gorilla/mux",
+			"vcs": "git",
+			"revision": "780415097119f6f61c55475fe59b66f3c3e9ea53",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/mitchellh/mapstructure",
+			"repository": "https://github.com/mitchellh/mapstructure",
+			"vcs": "git",
+			"revision": "ca63d7c062ee3c9f34db231e352b60012b4fd0c1",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/onsi/ginkgo",
+			"repository": "https://github.com/onsi/ginkgo",
+			"vcs": "git",
+			"revision": "74c678d97c305753605c338c6c78c49ec104b5e7",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/onsi/gomega/format",
+			"repository": "https://github.com/onsi/gomega",
+			"vcs": "git",
+			"revision": "9ed8da19f2156b87a803a8fdf6d126f627a12db1",
+			"branch": "master",
+			"path": "format",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/onsi/gomega/gbytes",
+			"repository": "https://github.com/onsi/gomega",
+			"vcs": "git",
+			"revision": "9ed8da19f2156b87a803a8fdf6d126f627a12db1",
+			"branch": "master",
+			"path": "/gbytes",
+			"notests": true
+		},
+		{
+			"importpath": "golang.org/x/sys/unix",
+			"repository": "https://go.googlesource.com/sys",
+			"vcs": "git",
+			"revision": "a646d33e2ee3172a661fc09bca23bb4889a41bc8",
+			"branch": "master",
+			"path": "/unix",
+			"notests": true
+		}
+	]
+}

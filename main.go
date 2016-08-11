@@ -18,15 +18,19 @@ const (
 )
 
 type Page struct {
-	Title string
-	Body  string
+	Title    string
+	AppName  string
+	AppIndex int
 }
 
 func HomeHandler(responseWriter http.ResponseWriter, request *http.Request) {
 	t, _ := template.ParseFiles("templates/home.html")
+
+	appEnv, _ := cfenv.Current()
 	p := Page{
-		Title: "Welcome",
-		Body:  "Hello, World!",
+		Title:    "Welcome",
+		AppName:  appEnv.Name,
+		AppIndex: appEnv.Index,
 	}
 	t.Execute(responseWriter, p)
 }

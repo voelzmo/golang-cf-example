@@ -14,7 +14,8 @@ import (
 )
 
 const (
-	DEFAULT_PORT = "8080"
+	DEFAULT_PORT     = "8080"
+	DEFAULT_APP_NAME = "my-app"
 )
 
 type Page struct {
@@ -36,12 +37,20 @@ func HomeHandler(responseWriter http.ResponseWriter, request *http.Request) {
 }
 
 func main() {
-	var port string
-	logger := lager.NewLogger("my-app")
+	var (
+		port    string
+		appName string
+	)
+
+	appEnv, _ := cfenv.Current()
+	if appName = appEnv.Name; len(appName) == 0 {
+		appName = DEFAULT_APP_NAME
+	}
+
+	logger := lager.NewLogger(appName)
 	sink := lager.NewReconfigurableSink(lager.NewWriterSink(os.Stdout, lager.DEBUG), lager.DEBUG)
 	logger.RegisterSink(sink)
 
-	appEnv, _ := cfenv.Current()
 	logger.Info("Just logging out some application environment info", lager.Data{"appEnv": fmt.Sprintf("%+v", appEnv)})
 
 	if port = os.Getenv("PORT"); len(port) == 0 {
